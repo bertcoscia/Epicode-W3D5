@@ -128,6 +128,23 @@ console.log("i love coding");
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
+console.log("------------------ ESERCIZIO 4 ------------------");
+
+const deleteOne = (stringa, booleano) => {
+  if (booleano) {
+    const nuovaStringa = stringa.slice(1);
+    console.log(nuovaStringa);
+    return nuovaStringa;
+  } else {
+    const nuovaStringa = stringa.slice(0, -1);
+    console.log(nuovaStringa);
+    return nuovaStringa;
+  }
+};
+
+deleteOne("prova", true);
+deleteOne("prova", false);
+
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
