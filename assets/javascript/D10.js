@@ -151,6 +151,25 @@ deleteOne("prova", false);
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+console.log("------------------ ESERCIZIO 5 ------------------");
+
+const onlyLetters = (stringa) => {
+  // creo un array il cui valore è il risultato dello split per parola della stringa passata come paramentro
+  const strArray = stringa.split(" ");
+
+  // creo un nuovo array il cui valore è strArray.filter(). il filtro itera ogni elemento dell'array strArray:
+  // parseInt(currentElement) converte ogni elemento dell'array in un numero, se non è possibile ritorna NaN
+  // isNaN() controlla che il risultato della conversione sia NaN: se true, ritorna l'elemento -> quindi ho un array di soli elementi NaN, in questo caso stringhe
+  const arrayLettere = strArray.filter((currentElement) => isNaN(parseInt(currentElement)));
+
+  // creo una variabile il cui valore è il join per parola degli elementi di arrayLetters -> quindi ho una stringa senza numeri
+  const risultato = arrayLettere.join(" ");
+  console.log(risultato);
+  return risultato;
+};
+
+onlyLetters("i have 4 dogs");
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
