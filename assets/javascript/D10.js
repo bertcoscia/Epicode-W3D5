@@ -273,6 +273,37 @@ howManyDays("2024-05-16");
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 
+console.log("------------------ ESERCIZIO 10 ------------------");
+
+const isTodayMyBirthday = () => {
+  const birthday = new Date("1998-04-15");
+  // creo un array e ci metto dentro il mese ed il giorno del mio compleanno
+  const birthdayArr = [];
+  const birthdayMonth = birthday.getMonth();
+  const birthdayDay = birthday.getDate();
+  birthdayArr.push(birthdayMonth, birthdayDay);
+
+  // creo un altro array e ci metto dentro il mese ed il giorno corrente
+  const todayArr = [];
+  const now = new Date();
+  const actualMonth = now.getMonth();
+  const actualDay = now.getDate();
+  todayArr.push(actualMonth, actualDay);
+
+  // creo un cilco for e controllo che mese e giorno dentro i due array siano gli stessi; se si ritorna true, altrimenti ritorna false
+  for (let i = 0; i < todayArr.length; i++) {
+    if (birthdayArr[i] === todayArr[i]) {
+      console.log(true);
+      return true;
+    } else {
+      console.log(false);
+      return false;
+    }
+  }
+};
+
+isTodayMyBirthday();
+
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
