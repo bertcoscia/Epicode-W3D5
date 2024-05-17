@@ -77,6 +77,13 @@ console.log(me.skills);
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+console.log("------------------ ESERCIZIO 1 ------------------");
+const dice = () => {
+  const number = Math.floor(Math.random() * 6) + 1;
+  console.log(number);
+};
+dice();
+
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
