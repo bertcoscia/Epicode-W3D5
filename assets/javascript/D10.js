@@ -623,6 +623,14 @@ const addLi = () => {
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+const emptyList = () => {
+  const lista = document.getElementById("myList");
+  const listItems = lista.querySelectorAll("li");
+  for (let i = 0; i < listItems.length; i++) {
+    listItems[i].innerText = "";
+  }
+};
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
