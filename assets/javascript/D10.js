@@ -194,6 +194,25 @@ isThisAnEmail("ciao");
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
+console.log("------------------ ESERCIZIO 7 ------------------");
+
+const whatDayIsIt = () => {
+  const now = new Date(); // ottengo le info del momento esatto in cui eseguo la funzione
+  const currentDay = now.getDay(); // ottengo il numero del giorno attuale (il conto dei giorni parte da domenica: domenica = 0, sabato = 6)
+  return currentDay; // ritorno il numero del giorno
+
+  /* SE VOLESSI RITORNARE IL NOME DEL GIORNO 
+  // per avere i giorni in italiano, creo un array di stringhe con i giorni partendo da domenica (vedi commento riga currentDay)
+  const days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
+  // creo una variabile today il cui valore sarà l'elemento dell'array days all'indice currentDay
+  const today = days[currentDay];
+  console.log("oggi è", today);
+  return today;
+  */
+};
+
+whatDayIsIt();
+
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
