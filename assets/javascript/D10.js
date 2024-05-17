@@ -51,8 +51,7 @@ console.log(me);
 */
 
 console.log("------------------ ESERCIZIO E ------------------");
-const skills = ["Javascript"];
-me.skills = skills;
+me.skills = ["Javascript"];
 console.log(me);
 
 /* ESERCIZIO F
