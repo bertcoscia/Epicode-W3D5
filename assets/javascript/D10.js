@@ -635,6 +635,13 @@ const emptyList = () => {
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+const addClass = () => {
+  const allTr = document.querySelectorAll("tr");
+  for (let i = 0; i < allTr.length; i++) {
+    allTr[i].classList.add("test");
+  }
+};
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
