@@ -13,9 +13,7 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 console.log("------------------ ESERCIZIO A ------------------");
-const num10 = 10;
-const num20 = 20;
-const sum = num10 + num20;
+const sum = 10 + 20;
 console.log(sum);
 
 /* ESERCIZIO B
@@ -257,6 +255,19 @@ rollTheDices(2);
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
+
+console.log("------------------ ESERCIZIO 9 ------------------");
+
+const howManyDays = (data) => {
+  const milSecInDay = 1000 * 60 * 60 * 24; // numero di milsec in un giorno
+  const now = new Date().getTime(); // ora attuale in milsec
+  const giornoPast = new Date(data).getTime();
+  const differenza = Math.round((now - giornoPast) / milSecInDay); // calcola la diffirenza di milsec tra le due date e la arrotondo
+  console.log(differenza);
+  return differenza;
+};
+
+howManyDays("2024-05-16");
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
