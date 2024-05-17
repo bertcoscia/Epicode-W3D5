@@ -78,6 +78,7 @@ console.log(me.skills);
 */
 
 console.log("------------------ ESERCIZIO 1 ------------------");
+
 const dice = () => {
   const number = Math.floor(Math.random() * 6) + 1;
   console.log(number);
@@ -87,6 +88,24 @@ dice();
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
+console.log("------------------ ESERCIZIO 2 ------------------");
+
+const whoIsBigger = (num1, num2) => {
+  if (num1 > num2) {
+    console.log(num1);
+    return num1;
+  } else if (num1 < num2) {
+    console.log(num2);
+    return num2;
+  } else {
+    console.log("i numeri sono uguali");
+  }
+};
+
+whoIsBigger(5, 7);
+whoIsBigger(26, 4);
+whoIsBigger(1, 1);
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
