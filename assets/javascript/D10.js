@@ -199,6 +199,7 @@ console.log("------------------ ESERCIZIO 7 ------------------");
 const whatDayIsIt = () => {
   const now = new Date(); // ottengo le info del momento esatto in cui eseguo la funzione
   const currentDay = now.getDay(); // ottengo il numero del giorno attuale (il conto dei giorni parte da domenica: domenica = 0, sabato = 6)
+  console.log(currentDay);
   return currentDay; // ritorno il numero del giorno
 
   /* SE VOLESSI RITORNARE IL NOME DEL GIORNO 
