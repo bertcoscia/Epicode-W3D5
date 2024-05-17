@@ -80,8 +80,9 @@ console.log(me.skills);
 console.log("------------------ ESERCIZIO 1 ------------------");
 
 const dice = () => {
-  const number = Math.floor(Math.random() * 6) + 1;
+  number = Math.floor(Math.random() * 6) + 1;
   console.log(number);
+  return number;
 };
 dice();
 
@@ -226,6 +227,32 @@ whatDayIsIt();
       values: [3, 3, 4]
   }
 */
+
+console.log("------------------ ESERCIZIO 8 ------------------");
+
+const rollTheDices = (num) => {
+  // creo una variabile sum ed un array values vuoto
+  let sum = 0;
+  const values = [];
+
+  // creo un ciclo for che richiama la funzione dice() tante volte quanto indicato dal paramentro passato
+  for (let i = 0; i < num; i++) {
+    numeroEstratto = dice(); // salvo il numero generato dalla funzione dice() in una variabile numeroEstratto; lo sommo a sum e lo pusho dentro values
+    sum += numeroEstratto;
+    values.push(numeroEstratto);
+  }
+
+  // creo un oggetto risultato e come proprietà gli do i valori di sum e values
+  const risultato = {
+    sum: sum,
+    values: values,
+  };
+  console.log(risultato);
+  return risultato; // ritorno l'oggetto
+};
+
+rollTheDices(3);
+rollTheDices(2);
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
