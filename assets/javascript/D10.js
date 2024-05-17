@@ -613,6 +613,12 @@ const addBackground = () => {
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const addLi = () => {
+  const lista = document.getElementById("myList");
+  const newLi = document.createElement("li");
+  lista.appendChild(newLi);
+};
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
