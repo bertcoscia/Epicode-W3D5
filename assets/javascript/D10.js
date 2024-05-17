@@ -515,6 +515,22 @@ sumAllTheYears(movies);
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
+console.log("------------------ ESERCIZIO 17 ------------------");
+
+const searchByTitle = (stringa) => {
+  const titolo = stringa;
+  for (let i = 0; i < movies.length; i++) {
+    if (titolo === movies[i].Title) {
+      console.log(movies[i]);
+      return movies[i];
+    }
+  }
+};
+
+searchByTitle("The Lord of the Rings: The Fellowship of the Ring");
+searchByTitle("The Lord of the Rings: The Two Towers");
+searchByTitle("The Lord of the Rings: The Return of the King");
+
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
