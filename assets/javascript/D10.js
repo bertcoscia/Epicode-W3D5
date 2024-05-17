@@ -499,6 +499,18 @@ console.log(onlyInLastMillennium(movies));
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+console.log("------------------ ESERCIZIO 16 ------------------");
+
+const sumAllTheYears = (array) => {
+  // faccio un reduce sull'array movies
+  const sum = array.reduce(function (acc, currentMovie) {
+    return acc + parseInt(currentMovie.Year); // ritorno la somma tra acc (che parte da 0) ed il valore della stringa Year convertito in numero
+  }, 0);
+  console.log(sum);
+};
+
+sumAllTheYears(movies);
+
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
