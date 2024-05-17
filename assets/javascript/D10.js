@@ -113,6 +113,16 @@ whoIsBigger(1, 1);
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
+console.log("------------------ ESERCIZIO 3 ------------------");
+
+const splitMe = (stringa) => {
+  const strArray = stringa.split(" ");
+  console.log(strArray);
+  return strArray;
+};
+
+console.log("i love coding");
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
