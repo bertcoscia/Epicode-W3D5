@@ -563,6 +563,16 @@ searchAndDivide("Tarzan");
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
+console.log("------------------ ESERCIZIO 19 ------------------");
+
+const removeIndex = (num) => {
+  movies.splice(num, 1);
+  console.log(movies);
+  return movies;
+};
+
+removeIndex(0);
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
